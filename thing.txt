@@ -1,0 +1,41 @@
+if  (run >= 5){
+                System.out.println(name + " has found another rover.");
+                 System.out.println("Should " + name + " fight this rover.");
+                while (rover2Health > 0){
+                    int health = 100;
+                    if (health <= 0){
+                     System.out.println(name + " has been killed.");
+                     alive = false;
+                    }
+                    String rover2 = input.readString();
+                    if (rover2.equals("yes")){
+                        System.out.println(name + " has started fighting the second rover.");
+                        System.out.println("What attack should " + name + " use?");
+                        System.out.println("_________________________");
+                        System.out.println("         Attacks");
+                        System.out.println( "lazers: to shoot lazers");
+                        System.out.println("     stare: to stare");
+                        System.out.println("  throw: to throw rocks");
+                        System.out.println("___________________________");
+                        String attack = input.readString();
+                        if (attack.equals("lazers")){
+                              rover2Health -= 35;
+                              System.out.println(name + "has damaged the other rover by 35.");
+                              System.out.println("The rover's health is now " + rover2Health + ".");
+                              r1.otherRobot();
+                        }
+                        else if (attack.equals("stare")){
+                              rover2Health -= 35;
+                              System.out.println(name + "has damaged the other rover by 5.");
+                              System.out.println("The rover's health is now " + rover2Health + ".");
+                              r1.otherRobot();
+                        }
+                        else if (attack.equals("throw")){
+                              System.out.println(name + "has damaged the other rover by 15.");
+                              System.out.println("The rover's health is now " + rover2Health + ".");
+                              r1.otherRobot();
+                        }
+                    }
+                    
+                }
+            }
